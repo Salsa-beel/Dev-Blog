@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Renderer2, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BlogPost } from 'src/app/models/blog-post.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { BlogPost } from 'src/app/models/blog-post.model';
 })
 export class PaginationComponent {
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
   @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
 

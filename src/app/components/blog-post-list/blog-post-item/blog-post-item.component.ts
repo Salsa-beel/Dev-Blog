@@ -11,12 +11,11 @@ export class BlogPostItemComponent implements OnInit {
 
   @Input() blogPost!:BlogPost;
 
-  constructor( ) { }
+  constructor() { }
 
   ngOnInit() {
 
   }
-
 
 
 }
