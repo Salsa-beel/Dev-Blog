@@ -9,6 +9,7 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
 
   ],
   providers: [],

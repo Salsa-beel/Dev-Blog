@@ -1,17 +1,26 @@
-<!-- <div class="container-fluid text-center ms-5 mt-5">
-  <div class="row">
-    <div class="col-lg-12">
+<div class="card border border-1 " style="max-width: 23rem; height: 100%;">
+  <div class="card-body text-start">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <!-- Increase the height of the image by adjusting the 'height' style -->
+        <img src="{{blogPost.cover_image}}" class="img-fluid pb-5" alt="no photo :(" style="height: 200px;" />
+      </div>
+    </div>
+    <h5 class="card-title mt">{{ blogPost.title }}</h5>
+    <p class="card-text text-muted fs-6">{{ blogPost.description }}</p>
+  </div>
+  <div class="card-text p-4">
+    <div class="d-flex align-items-center text-start justify-content-start"> <!-- Center the content -->
+      <!-- Profile Picture -->
+      <img src="{{blogPost.user.profile_image}}" class="img-fluid rounded-circle me-3" alt="Profile Picture" style="height: 40px;" />
+
+      <!-- Author Name and Date -->
+      <div>
+        <small class="card-title mb-0">{{ blogPost.user.name }}</small> <!-- Add margin-bottom to separate from the date -->
+        <div class="card-text text-muted fs-6"> <small>{{ blogPost.created_at | date }}</small> </div> <!-- Use a <div> to wrap the date -->
+      </div>
+    </div>
 
 
-  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ blogPost.title }}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-
-    </div>
-  </div>
-</div> -->

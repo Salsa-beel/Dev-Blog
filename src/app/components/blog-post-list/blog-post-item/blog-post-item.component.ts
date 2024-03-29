@@ -9,7 +9,7 @@ import { BlogPost } from 'src/app/models/blog-post.model';
 })
 export class BlogPostItemComponent implements OnInit {
 
-  // @Input() blogPost!:BlogPost;
+  @Input() blogPost!:BlogPost;
 
   constructor( ) { }
 
