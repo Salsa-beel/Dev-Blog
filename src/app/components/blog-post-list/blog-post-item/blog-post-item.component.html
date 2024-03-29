@@ -1,29 +1,59 @@
-<div class="card border border-1 " style="max-width: 23rem; height: 100%;">
+<div class="card border border-opacity-10" style="max-width: 23rem; height: 100%">
   <div class="card-body text-start">
+    <!-- Cover Image -->
     <div class="row justify-content-center">
       <div class="col-lg-12">
-        <!-- Increase the height of the image by adjusting the 'height' style -->
-        <img src="{{blogPost.cover_image ? blogPost.cover_image : 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fq0uqvg9sktevodg579o7.png'}}" class="img-fluid pb-5" style="height: 200px;" />
- </div>
-    </div>
-    <h5 class="card-title mt">{{ blogPost.title }}</h5>
-    <p class="card-text text-muted fs-6">{{ blogPost.description }}</p>
-  </div>
-  <div class="card-text p-4">
-    <div class="d-flex align-items-center text-start justify-content-start"> <!-- Center the content -->
-      <!-- Profile Picture -->
-      <img src="{{blogPost.user.profile_image}}" class="img-fluid rounded-circle me-3" alt="Profile Picture" style="height: 40px;" />
-
-      <!-- Author Name and Date -->
-      <div>
-        <small class="card-title mb-0">{{ blogPost.user.name }}</small> <!-- Add margin-bottom to separate from the date -->
-        <div class="card-text text-muted fs-6"> <small>{{ blogPost.created_at | date }}</small> </div> <!-- Use a <div> to wrap the date -->
+        <img
+          [src]="blogPost.cover_image || 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fq0uqvg9sktevodg579o7.png'"
+          class="img-fluid pb-5"
+          style="height: 200px"
+        />
       </div>
     </div>
 
+    <!-- Title and Arrow Icon -->
+    <div class="row">
+      <div class="col-8">
+        <h5 class="card-title fw-semibold">{{ blogPost.title }}</h5>
+      </div>
+      <div class="col-4 d-flex align-items-center justify-content-end">
+        <a href="{{blogPost.url}}" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            style="height: 30px; width: 30px"
+            id="upper-right-arrow"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M17.4521484,6H6.5471191C6.2445679,6.0001831,5.9994507,6.2456665,5.9996338,6.5482178s0.2456665,0.5476685,0.5482178,0.5474854h9.5845337l-9.9702759,9.9707031c-0.1026611,0.102417-0.1602783,0.2415771-0.1600342,0.3865967c0.0004883,0.3009644,0.244812,0.5445557,0.5457764,0.5440674c0.1446533,0.0004272,0.2834473-0.0568848,0.3857422-0.1591797l9.9707031-9.9711304v9.5858154C16.9044189,17.7550049,17.1497192,18.0001221,17.4521484,18h0.0004272C17.7550049,17.9998779,18.0001221,17.7545776,18,17.4521484V6.5474243C17.9998779,6.2449951,17.7545776,5.9998779,17.4521484,6z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
 
+    <!-- Description -->
+    <p class="card-text mt-2 text-muted fs-6 lh-base">{{ blogPost.description }}</p>
+  </div>
+
+  <!-- Author Info -->
+  <div class="card-text p-4">
+    <div class="d-flex align-items-center text-start justify-content-start">
+      <!-- Profile Picture -->
+      <img
+        [src]="blogPost.user.profile_image"
+        class="img-fluid rounded-circle me-3"
+        alt="Profile Picture"
+        style="height: 40px"
+      />
+
+      <!-- Author Name and Date -->
+      <div>
+        <small class="card-title mb-0">{{ blogPost.user.name }}</small>
+        <div class="card-text text-muted fs-6">
+          <small>{{ blogPost.created_at | date }}</small>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-
