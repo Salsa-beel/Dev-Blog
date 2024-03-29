@@ -17,5 +17,9 @@ export class BlogPostItemComponent implements OnInit {
 
   }
 
-
+//  handleImageLoad(event: any) {
+//     if (!this.blogPost.cover_image) {
+//       event.target.src = 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg'; // Replace with the actual URL of the alternative image
+//     }
+//   }
 }

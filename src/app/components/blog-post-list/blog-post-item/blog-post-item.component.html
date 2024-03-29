@@ -3,8 +3,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <!-- Increase the height of the image by adjusting the 'height' style -->
-        <img src="{{blogPost.cover_image}}" class="img-fluid pb-5" alt="no photo :(" style="height: 200px;" />
-      </div>
+        <img src="{{blogPost.cover_image ? blogPost.cover_image : 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fq0uqvg9sktevodg579o7.png'}}" class="img-fluid pb-5" style="height: 200px;" />
+ </div>
     </div>
     <h5 class="card-title mt">{{ blogPost.title }}</h5>
     <p class="card-text text-muted fs-6">{{ blogPost.description }}</p>
@@ -24,3 +24,6 @@
 
   </div>
 </div>
+
+
+

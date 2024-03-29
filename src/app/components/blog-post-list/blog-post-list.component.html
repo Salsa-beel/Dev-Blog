@@ -60,7 +60,7 @@
                 currentPage: currentPage,
                 totalItems: allPosts
               }">
-      <app-blog-post-item [blogPost]="post"></app-blog-post-item>
+      <app-blog-post-item *ngIf="!isLoading" [blogPost]="post"></app-blog-post-item>
     </div>
   </div>
 </div>
@@ -70,3 +70,6 @@
   (pageChange)="onPageChange($event)">
 </app-pagination>
 
+<div class="col-lg-12 col-md-6 col-sm-12 mt-5 d-flex justify-content-center" *ngIf="isLoading">
+<app-loading-indicator></app-loading-indicator>
+</div>

@@ -14,6 +14,9 @@ export class BlogPostListComponent implements OnInit {
   itemsPerPage: number = 9; // Add this line
   allPosts: number = 0; // Initialize allPosts
 
+  isLoading:boolean = false;
+  isError:boolean = false;
+
   constructor(private blogService: BlogServiceService) { }
 
   ngOnInit() {
@@ -21,8 +24,10 @@ export class BlogPostListComponent implements OnInit {
   }
 
   getBlogPosts() {
+    this.isLoading = true;
     this.blogService.getPosts().subscribe(posts => {
       this.blogPosts = posts;
+      this.isLoading = false;
       this.allPosts = this.blogPosts.length; // Update allPosts after fetching blog posts
     });
   }
