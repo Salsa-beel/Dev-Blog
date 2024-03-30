@@ -15,4 +15,10 @@ p.long-text{
   color: #6941C6;
 }
 
-
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the image is behind other content */
+  /* Additional styling if needed */
+}
