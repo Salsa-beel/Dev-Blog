@@ -8,37 +8,34 @@ import { BlogPost } from 'src/app/models/blog-post.model';
   styleUrls: ['./error-message.component.css']
 })
 export class ErrorMessageComponent implements OnInit {
-  blogPosts: BlogPost[]=[];
-  isLoading: boolean=false;
-  isError: boolean=false;
+  blogPosts: BlogPost[] = [];
+  isLoading: boolean = false;
+  isError: boolean = false;
 
-
-  constructor(private blogservice:BlogServiceService) { }
+  constructor(private blogservice: BlogServiceService) { }
 
   ngOnInit() {
-    this.fetchBlogPosts();
+    this.fetchBlogPosts(); // Fetch blog posts on component initialization
   }
 
   fetchBlogPosts(): void {
-    this.isLoading = true;
+    this.isLoading = true; // Set loading state to true
     this.blogservice.getPosts().subscribe(
       (posts: BlogPost[]) => {
-        this.blogPosts = posts;
-        this.isLoading = false;
+        this.blogPosts = posts; // Assign fetched posts to the array
+        this.isLoading = false; // Set loading state to false
       },
       (error: any) => {
-        console.error('Error fetching blog posts:', error);
-        this.isError = true;
-        this.isLoading = false;
+        console.error('Error fetching blog posts:', error); // Log error to console
+        this.isError = true; // Set error state to true
+        this.isLoading = false; // Set loading state to false
       }
     );
   }
 
   retryFetchBlogPosts(): void {
-    // Reset error state
-    this.isError = false;
-    this.isLoading = true;
-    // Retry fetching blog posts
-    this.fetchBlogPosts();
+    this.isError = false; // Reset error state
+    this.isLoading = true; // Set loading state to true
+    this.fetchBlogPosts(); // Retry fetching blog posts
   }
 }
