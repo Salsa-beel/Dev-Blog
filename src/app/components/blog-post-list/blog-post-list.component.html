@@ -1,7 +1,7 @@
 <div class="container-fluid ">
   <div class="row ">
     <div class="col-lg-12">
-      <img src="/assets/background.png" class="img-fluid h-10 background-image" alt="...">
+      <img src="/assets/background.png" class="img-fluid background-image" alt="...">
     </div>
   </div>
 </div>
@@ -10,11 +10,13 @@
 
   <div class="row">
     <div class="col-lg-4"></div>
-    <div class="col-lg-4">
-      <p class="text-center fs-6 mt-3">
-        <span class="blog fs-6 fw-normal rounded-5 p-2">Our blog</span>
-      </p>
-    </div>
+   <div class="col-lg-4">
+  <p class="d-flex justify-content-center mt-3">
+    <span class="blog d-none d-sm-block fs-6 fw-normal rounded-5 p-2">Our blog</span>
+    <span class="blog fs-6 fw-normal d-block d-sm-none rounded-5 p-2">Pricing Plans</span>
+  </p>
+</div>
+
     <div class="col-lg-4"></div>
   </div>
   <div class="row">
@@ -40,7 +42,7 @@
   </div>
 </div>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-lg-4 col-md-6 col-sm-12 mt-5 d-flex justify-content-center" *ngFor="let post of paginatedBlogPosts | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: allPosts }">
       <app-blog-post-item *ngIf="!isLoading" [blogPost]="post"></app-blog-post-item>

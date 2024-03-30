@@ -1,46 +1,42 @@
-span{
-  background-color: #F9F5FF;
+/* Span Styles */
+span {
+  background-color: rgb(244, 235, 255);
 }
 
-span.blog{
-  color: #6941C6;
+span.blog {
+  color: hsl(258, 54%, 52%);
 }
 
-p.header{
+/* Paragraph Styles */
+p.header {
   color: #42307D;
 }
 
-p.long-text{
-
+p.long-text {
   color: #6941C6;
 }
 
-.background{
+/* Background Styles */
+.background {
   background-color: rgb(249, 245, 255);
 }
+
 .background-image {
   position: absolute;
   top: 250px;
+  height: 1000px; /* Adjust height as needed */
   left: 0;
   width: 100%;
   z-index: -1; /* Ensure the image is behind other content */
   /* Additional styling if needed */
 }
 
+/* Container Styles */
 .container-fluid.bg {
   margin-top: 0; /* Remove default margin from the top */
-}
-
-/* Position container-fluid at the top */
-.container-fluid.bg {
-  position: absolute;
+  position: absolute; /* Position container-fluid at the top */
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 100px; /* Optional: Add padding to the top of the container-fluid */
 }
-
-/* Optional: Add padding to the top of the container-fluid */
-.container-fluid.bg {
-  padding-top: 100px; /* Adjust as needed */
-}
-
