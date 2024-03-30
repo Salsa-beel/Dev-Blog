@@ -23,6 +23,7 @@ p.long-text {
 
 .background-image {
   position: absolute;
+  background-color: rgb(249, 245, 255);
   top: 250px;
   height: 1000px; /* Adjust height as needed */
   left: 0;

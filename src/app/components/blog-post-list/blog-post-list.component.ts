@@ -30,7 +30,7 @@ export class BlogPostListComponent implements OnInit {
     this.blogService.getPosts().subscribe(
       (posts: BlogPost[]) => {
         this.blogPosts = posts;
-        this.allPosts = this.blogPosts.length = 0;
+        this.allPosts = this.blogPosts.length;
         this.isLoading = false;
         this.noPostsAvailable = this.blogPosts.length === 0;
       },
