@@ -14,11 +14,17 @@
   border-radius: 50% !important;
 }
 
+.ngx-pagination a {
+  transition: background-color 0.3s, border-color 0.3s; /* Add transition for background-color and border-color */
+}
+
 .ngx-pagination a:hover {
   background: #f9f9faf1 !important;
   border: 2px solid #0303035a;
   border-radius: 50% !important;
+  transition: background-color 0.31s, border-color 0.31s; /* Add transition for hover state */
 }
+
 
 h5,p{
   font-family: "Inter", sans-serif;

@@ -9,11 +9,13 @@ import { BlogPost } from 'src/app/models/blog-post.model';
 })
 export class BlogPostListComponent implements OnInit {
   @Input() blogPosts: BlogPost[] = [];
+  paginatBlogPosts: BlogPost[] = [];
   currentPage = 1;
   itemsPerPage = 9;
   allPosts = 0;
-  isLoading = false;
-  isError = false;
+  noPostsAvailable: boolean = false;
+  isLoading:boolean = false;
+  isError:boolean = false; // Variable to store error state
 
   constructor(private blogService: BlogServiceService) { }
 
@@ -22,18 +24,21 @@ export class BlogPostListComponent implements OnInit {
   }
 
   // Fetch blog posts from the service
-  private fetchBlogPosts(): void {
+   fetchBlogPosts(): void {
     this.isLoading = true;
+
     this.blogService.getPosts().subscribe(
       (posts: BlogPost[]) => {
         this.blogPosts = posts;
-        this.allPosts = this.blogPosts.length;
+        this.allPosts = this.blogPosts.length = 0;
         this.isLoading = false;
+        this.noPostsAvailable = this.blogPosts.length === 0;
       },
-      (error: any) => {
-        console.error('Error fetching blog posts:', error);
-        this.isLoading = false;
+      (isError: any) => {
+        console.error('Error fetching blog posts:', isError);
         this.isError = true;
+        this.isLoading = false;
+
       }
     );
   }
