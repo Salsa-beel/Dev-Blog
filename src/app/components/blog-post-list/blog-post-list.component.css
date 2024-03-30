@@ -15,10 +15,32 @@ p.long-text{
   color: #6941C6;
 }
 
+.background{
+  background-color: rgb(249, 245, 255);
+}
 .background-image {
   position: absolute;
-  top: 0;
+  top: 250px;
   left: 0;
+  width: 100%;
   z-index: -1; /* Ensure the image is behind other content */
   /* Additional styling if needed */
 }
+
+.container-fluid.bg {
+  margin-top: 0; /* Remove default margin from the top */
+}
+
+/* Position container-fluid at the top */
+.container-fluid.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Optional: Add padding to the top of the container-fluid */
+.container-fluid.bg {
+  padding-top: 100px; /* Adjust as needed */
+}
+
