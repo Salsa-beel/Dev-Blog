@@ -11,7 +11,7 @@ import { BlogPost } from '../models/blog-post.model';
 export class BlogServiceService {
 
   // Define the API URL for fetching blog posts
-  private apiUrl = "https://dev.to/api/articles";
+  private apiUrl = "https://dev.to/api/articless";
 
   // Constructor to inject HttpClient
   constructor(private http: HttpClient) { }

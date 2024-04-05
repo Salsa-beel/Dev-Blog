@@ -5,7 +5,6 @@
   width: 30em;
   height: 30em;
 }
-
 .main {
   display: flex;
   flex-direction: column;
@@ -13,120 +12,6 @@
   justify-content: center;
   margin-top: 5em;
 }
-
-.antenna {
-  width: 5em;
-  height: 5em;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: #060605;
-  margin-bottom: -6em;
-  margin-left: 0em;
-  z-index: -1;
-}
-.antenna_shadow {
-  position: absolute;
-  background-color: transparent;
-  width: 50px;
-  height: 56px;
-  margin-left: 1.68em;
-  border-radius: 45%;
-  transform: rotate(140deg);
-  border: 4px solid transparent;
-  box-shadow: inset 0px 16px #000000, inset 0px 16px 1px 1px #fafafb;
-  -moz-box-shadow: inset 0px 16px #0c0d0c, inset 0px 16px 1px 1px #040404;
-}
-.antenna::after {
-  content: "";
-  position: absolute;
-  margin-top: -9.4em;
-  margin-left: 0.4em;
-  transform: rotate(-25deg);
-  width: 1em;
-  height: 0.5em;
-  border-radius: 50%;
-  background-color: #faf7fb;
-}
-.antenna::before {
-  content: "";
-  position: absolute;
-  margin-top: 0.2em;
-  margin-left: 1.25em;
-  transform: rotate(-20deg);
-  width: 1.5em;
-  height: 0.8em;
-  border-radius: 50%;
-  background-color: #f5f4f6;
-}
-.a1 {
-  position: relative;
-  top: -102%;
-  left: -130%;
-  width: 12em;
-  height: 5.5em;
-  border-radius: 50px;
-  background-image: linear-gradient(
-    #171717,
-    #171717,
-    #353535,
-    #353535,
-    #171717
-  );
-  transform: rotate(-29deg);
-  clip-path: polygon(50% 0%, 49% 100%, 52% 100%);
-}
-.a1d {
-  position: relative;
-  top: -211%;
-  left: -35%;
-  transform: rotate(45deg);
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: #979797;
-  z-index: 99;
-}
-.a2 {
-  position: relative;
-  top: -210%;
-  left: -10%;
-  width: 12em;
-  height: 4em;
-  border-radius: 50px;
-  background-color: #171717;
-  background-image: linear-gradient(
-    #171717,
-    #171717,
-    #353535,
-    #353535,
-    #171717
-  );
-  margin-right: 5em;
-  clip-path: polygon(
-    47% 0,
-    47% 0,
-    34% 34%,
-    54% 25%,
-    32% 100%,
-    29% 96%,
-    49% 32%,
-    30% 38%
-  );
-  transform: rotate(-8deg);
-}
-.a2d {
-  position: relative;
-  top: -294%;
-  left: 94%;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: #979797;
-  z-index: 99;
-}
-
 .notfound_text {
   background-color: black;
   padding-left: 0.3em;
